@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:clickable="true"
+    android:focusable="true"
+    tools:background="@color/gray_main"
+    tools:layout_marginStart="0dp">
+
+    <com.rizzle.sdk.faas.customviews.ExpandableLayout
+        android:id="@+id/prompt_track_card_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:expanded="true"
+        app:duration="300"
+        app:parallax="0.5"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/expanded_prompt_layout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_music_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/padding_8"
+                android:background="@drawable/rounded_corner_gray_800"
+                android:paddingEnd="8dp"
+                app:layout_constraintEnd_toStartOf="@id/music_card_ic_show_detail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/music_track_thumbnail"
+                    android:layout_width="78dp"
+                    android:layout_height="78dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/rectangle_862"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Cta"
+                    tools:ignore="ContentDescription" />
+
+                <com.rizzle.sdk.faas.customviews.StyledTextView
+                    android:id="@+id/music_track_title"
+                    style="@style/SUBTITLE_BOLD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/padding_8"
+                    android:layout_marginTop="@dimen/padding_8"
+                    android:ellipsize="marquee"
+                    android:gravity="start"
+                    android:singleLine="true"
+                    android:text="@string/brahamstra"
+                    android:textColor="@color/white"
+                    app:colorType="SHADE_1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toEndOf="@id/music_track_thumbnail"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_default="wrap"
+                    app:styleType="SUBTITLE_BOLD" />
+
+
+                <com.rizzle.sdk.faas.customviews.StyledTextView
+                    android:id="@+id/tv_watch_now"
+                    style="@style/BODY_1_SEMI_BOLD"
+                    paddingVertical="8dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_12"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/rounded_corner_primary_color"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/watch_now"
+                    android:textColor="@color/white"
+                    app:colorType="SHADE_1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/music_track_thumbnail"
+                    app:layout_constraintStart_toStartOf="@id/music_track_title"
+                    app:layout_constraintTop_toBottomOf="@id/music_track_title"
+                    app:styleType="BODY_1_SEMI_BOLD" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/music_card_ic_show_detail"
+                android:layout_width="26dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_arrow_up_black_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cl_music_card"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.rizzle.sdk.faas.customviews.ExpandableLayout>
+
+    <com.rizzle.sdk.faas.customviews.ExpandableLayout
+        android:id="@+id/expanded_prompt_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:expanded="true"
+        app:duration="300"
+        app:parallax="0.5"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_default="wrap">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.rizzle.sdk.faas.customviews.StyledTextView
+                android:id="@+id/expanded_prompt_title"
+                style="@style/SUBTITLE_BOLD"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:text="jcanjkncakn"
+                android:textColor="@color/white"
+                app:colorType="SHADE_1"
+                app:layout_constraintEnd_toStartOf="@+id/ic_hide_details"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_default="wrap"
+                app:styleType="SUBTITLE_BOLD" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_hide_details"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_down_arrow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/expanded_prompt_title"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.rizzle.sdk.faas.customviews.ExpandableLayout
+                android:id="@+id/expandable_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:duration="300"
+                app:expanded="true"
+                app:parallax="0.5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/expanded_prompt_title"
+                app:layout_constraintWidth_default="wrap"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.rizzle.sdk.faas.customviews.StyledTextView
+                        android:id="@+id/prompt_description"
+                        style="@style/BODY_1_REGULAR"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_8"
+                        android:ellipsize="end"
+                        android:text="@string/dummy_data_2"
+                        android:textColor="@color/gray_50"
+                        app:colorType="GRAY_50"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_default="wrap"
+                        app:styleType="BODY_1_REGULAR" />
+
+
+                    <com.rizzle.sdk.faas.autolink.AutoLinkTextView
+                        android:id="@+id/tvHashtags"
+                        style="@style/BODY_1_SEMI_BOLD"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="5sp"
+                        android:text="#hello"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="@id/prompt_description"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/prompt_description"
+                        app:layout_constraintWidth_default="wrap" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/feature_icon_play"
+                        android:layout_width="@dimen/padding_10"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:src="@drawable/ic_play"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvHashtags" />
+
+                    <com.rizzle.sdk.faas.customviews.StyledTextView
+                        android:id="@+id/total_views_ex"
+                        style="@style/BODY_1_SEMI_BOLD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/thirty_four"
+                        android:textColor="@color/white"
+                        app:colorType="SHADE_1"
+                        app:layout_constraintBottom_toBottomOf="@id/feature_icon_play"
+                        app:layout_constraintStart_toEndOf="@id/feature_icon_play"
+                        app:layout_constraintTop_toTopOf="@id/feature_icon_play"
+                        app:styleType="BODY_1_SEMI_BOLD" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ic_dot_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:src="@drawable/ic_dot"
+                        app:layout_constraintBottom_toBottomOf="@id/total_views_ex"
+                        app:layout_constraintStart_toEndOf="@id/total_views_ex"
+                        app:layout_constraintTop_toTopOf="@id/total_views_ex" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_trend"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginStart="4dp"
+                        android:src="@drawable/ic_trending"
+                        app:layout_constraintBottom_toBottomOf="@id/feature_icon_play"
+                        app:layout_constraintStart_toEndOf="@id/ic_dot_1"
+                        app:layout_constraintTop_toTopOf="@id/feature_icon_play" />
+
+                    <com.rizzle.sdk.faas.customviews.StyledTextView
+                        android:id="@+id/tv_trend"
+                        style="@style/BODY_1_SEMI_BOLD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/trending"
+                        android:textColor="@color/neon_green"
+                        app:layout_constraintBottom_toBottomOf="@id/feature_icon_play"
+                        app:layout_constraintStart_toEndOf="@id/iv_trend"
+                        app:layout_constraintTop_toTopOf="@id/feature_icon_play"
+                        app:styleType="BODY_1_SEMI_BOLD"
+                        tools:ignore="RtlSymmetry" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ic_dot_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:src="@drawable/ic_dot"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_trend"
+                        app:layout_constraintStart_toEndOf="@id/tv_trend"
+                        app:layout_constraintTop_toTopOf="@id/tv_trend" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_featured"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginStart="4dp"
+                        android:src="@drawable/ic_featured"
+                        app:layout_constraintBottom_toBottomOf="@id/feature_icon_play"
+                        app:layout_constraintStart_toEndOf="@id/ic_dot_2"
+                        app:layout_constraintTop_toTopOf="@id/feature_icon_play" />
+
+
+                    <com.rizzle.sdk.faas.customviews.StyledTextView
+                        android:id="@+id/tv_featured"
+                        style="@style/BODY_1_SEMI_BOLD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/featured"
+                        android:textColor="@color/white"
+                        app:colorType="SHADE_1"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_featured"
+                        app:layout_constraintStart_toEndOf="@id/iv_featured"
+                        app:layout_constraintTop_toTopOf="@+id/iv_featured"
+                        app:styleType="BODY_1_SEMI_BOLD" />
+
+
+                    <androidx.constraintlayout.widget.Group
+                        android:id="@+id/trend_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:constraint_referenced_ids="tv_trend, iv_trend, ic_dot_1" />
+
+                    <androidx.constraintlayout.widget.Group
+                        android:id="@+id/featured_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:constraint_referenced_ids="tv_featured, iv_featured, ic_dot_2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.rizzle.sdk.faas.customviews.ExpandableLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/music_track_lottie_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_12"
+                android:background="@drawable/curved_background"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/expandable_details"
+                app:layout_constraintWidth_default="wrap"
+                >
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottieTrack"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/circle_background"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+                <com.rizzle.sdk.faas.customviews.StyledTextView
+                    android:id="@+id/feed_track_name"
+                    style="@style/BODY_1_REGULAR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="@string/track_name"
+                    android:textColor="@color/white"
+                    app:colorType="SHADE_1"
+                    app:styleType="BODY_1_REGULAR"
+                    app:layout_constraintStart_toEndOf="@id/lottieTrack"
+                    app:layout_constraintTop_toTopOf="@id/lottieTrack"
+                    app:layout_constraintBottom_toBottomOf="@id/lottieTrack"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constrainedWidth="true"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.rizzle.sdk.faas.customviews.ExpandableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ShapeAppearanceOverlay.App.MusicTrack" parent="">
+        <item name="cornerSize">24dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.Cta" parent="">
+        <item name="cornerSizeTopLeft">10dp</item>
+        <item name="cornerSizeBottomLeft">10dp</item>
+    </style>
+
+    <style name="exposureSeekBarStyle">
+        <item name="android:thumbTint">@color/white</item>
+        <item name="android:progressTint">@color/white</item>
+        <item name="android:progressBackgroundTint">@color/white</item>
+    </style>
+
+    <style name="BottomSheetTransparent" parent="Theme.Material3.Dark.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/TransparentRoundedCorner</item>
+    </style>
+
+    <style name="TransparentRoundedCorner">
+        <item name="background">@drawable/rounded_dialog_gray_900</item>
+    </style>
+
+    <style name="HEADING_1">
+        <item name="fontFamily">@font/work_sans_bold</item>
+        <item name="android:textSize">40sp</item>
+    </style>
+
+    <style name="HEADING_2_EXTRA_BOLD">
+        <item name="fontFamily">@font/work_sans_bold</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="HEADING_2_SEMI_BOLD">
+        <item name="fontFamily">@font/work_sans_semi_bold</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="TITLE_1">
+        <item name="fontFamily">@font/work_sans_bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TITLE_2_REGULAR">
+        <item name="fontFamily">@font/work_sans_regular</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TITLE_2_SEMI_BOLD">
+        <item name="fontFamily">@font/work_sans_semi_bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SUBTITLE_REGULAR">
+        <item name="fontFamily">@font/work_sans_regular</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="SUBTITLE_SEMI_BOLD">
+        <item name="fontFamily">@font/work_sans_semi_bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="SUBTITLE_BOLD">
+        <item name="fontFamily">@font/work_sans_semi_bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="BODY_1_REGULAR">
+        <item name="fontFamily">@font/work_sans_regular</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="BODY_1_SEMI_BOLD">
+        <item name="fontFamily">@font/work_sans_semi_bold</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="BODY_2_SEMI_BOLD">
+        <item name="fontFamily">@font/work_sans_semi_bold</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="BODY_2_REGULAR">
+        <item name="fontFamily">@font/work_sans_regular</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="CAPTION">
+        <item name="fontFamily">@font/work_sans_medium</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+
+</resources>

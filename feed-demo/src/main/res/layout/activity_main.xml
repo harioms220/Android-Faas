@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grey_background"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/launch_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fragment_button_background"
+        android:fontFamily="@font/roboto_medium"
+        android:paddingTop="10dp"
+        android:paddingBottom="@dimen/padding_10"
+        android:text="@string/launch_activity_integration"
+        android:textAlignment="center"
+        android:textColor="@color/gentle_pink"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/launch_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/fragment_button_background"
+        android:fontFamily="@font/roboto_medium"
+        android:paddingTop="10dp"
+        android:paddingBottom="@dimen/padding_10"
+        android:text="@string/launch_fragment_integration"
+        android:textAlignment="center"
+        android:textColor="@color/gentle_pink"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/launch_activity" />
+
+    <TextView
+        android:id="@+id/launch_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/fragment_button_background"
+        android:fontFamily="@font/roboto_medium"
+        android:paddingTop="10dp"
+        android:paddingBottom="@dimen/padding_10"
+        android:text="@string/launch_navigation_integration"
+        android:textAlignment="center"
+        android:textColor="@color/gentle_pink"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/launch_fragment" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FeedView">
+        <attr name="orientation" format="enum" >
+            <enum name="horizontal" value="0"/>
+            <enum name="vertical" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="FeedContainer">
+        <attr name="feedScrollType" format="enum" >
+            <enum name="horizontal" value="0"/>
+            <enum name="vertical" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="StyledTextView">
+        <attr name="styleType" format="enum" >
+            <enum name="HEADING_1" value="0"/>
+            <enum name="HEADING_2_EXTRA_BOLD" value="1"/>
+            <enum name="HEADING_2_SEMI_BOLD" value="2"/>
+            <enum name="TITLE_1" value="3"/>
+            <enum name="TITLE_2_REGULAR" value="4"/>
+            <enum name="TITLE_2_SEMI_BOLD" value="5"/>
+            <enum name="SUBTITLE_REGULAR" value="6"/>
+            <enum name="SUBTITLE_SEMI_BOLD" value="7"/>
+            <enum name="SUBTITLE_BOLD" value="8"/>
+            <enum name="BODY_1_REGULAR" value="9"/>
+            <enum name="BODY_1_SEMI_BOLD" value="10"/>
+            <enum name="BODY_2_SEMI_BOLD" value="11"/>
+            <enum name="BODY_2_REGULAR" value="12"/>
+            <enum name="CAPTAIN" value="13"/>
+        </attr>
+        <attr name="colorType" />
+    </declare-styleable>
+
+    <declare-styleable name="StyledImageView">
+        <attr name="iconType" format="enum" >
+            <enum name="IC_BACK" value="0"/>
+            <enum name="IC_SHARE" value="1"/>
+            <enum name="IC_SHARE_LINK" value="2"/>
+            <enum name="IC_COPY_LINK" value="3"/>
+            <enum name="IC_MORE" value="4"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="LikeUnlikeImageView">
+        <attr name="iconSelected" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableLayout">
+        <attr name="duration" format="integer" />
+        <attr name="parallax" format="float" />
+        <attr name="expanded" format="boolean" />
+        <attr name="direction" format="enum">
+            <enum name="left" value="-1" />
+            <enum name="right" value="1" />
+        </attr>
+        <attr name="android:orientation" />
+    </declare-styleable>
+
+    <attr name="colorType" format="enum">
+        <enum name="GRAY_50" value="0"/>
+        <enum name="GRAY_100" value="1"/>
+        <enum name="GRAY_200" value="2"/>
+        <enum name="GRAY_300" value="3"/>
+        <enum name="GRAY_400" value="4"/>
+        <enum name="GRAY_500" value="5"/>
+        <enum name="GRAY_600" value="6"/>
+        <enum name="GRAY_700" value="7"/>
+        <enum name="GRAY_800" value="8"/>
+        <enum name="GRAY_900" value="9"/>
+        <enum name="PRIMARY" value="10"/>
+        <enum name="SECONDARY_1" value="11"/>
+        <enum name="SECONDARY_2" value="12"/>
+        <enum name="SHADE_1" value="13"/>
+        <enum name="SHADE_2" value="14"/>
+    </attr>
+</resources>

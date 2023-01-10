@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    // Grey Shades
+    <color name="gray_50">#F0F0F0</color>
+    <color name="gray_100">#E9E9ED</color>
+    <color name="gray_200">#D8D8DD</color>
+    <color name="gray_300">#A0A0A4</color>
+    <color name="gray_400">#888889</color>
+    <color name="gray_500">#575758</color>
+    <color name="gray_600">#474748</color>
+    <color name="gray_700">#373738</color>
+    <color name="gray_800">#272728</color>
+    <color name="gray_900">#171718</color>
+
+    // Primary
+    <color name="primary">#BB00ED</color>
+
+    // Secondary
+    <color name="neon_green">#D7FF00</color>
+    <color name="red_shade">#DD2E5A</color>
+    <color name="report_blue">#1ABAFF</color>
+
+    // Shades
+    <color name="gray_main">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray_dark">#373738</color>
+    <color name="gray_lighter">#a0a0a4</color>
+    <color name="gray_lightest">#d8d8dd</color>
+    <color name="gray_light_alt">#575758</color>
+    <color name="text_shadow_color">#4D000000</color>
+    <color name="transparent_black_80">#CC000000</color>
+    <color name="transparent_black_50">#8C000000</color>
+    <color name="gray_dark_alt">#474748</color>
+    <color name="transparent">#00000000</color>
+    <color name="prompt_gradient_end_color">#c0202020</color>
+
+    <!--skeleton shimmer-->
+    <color name="shimmer_mask_color">#373738</color>
+    <color name="transparent_black_10">#1A000000</color>
+
+
+    <color name="accent">#FF4081</color>
+
+    <!-- auto link library colors   -->
+    <color name="default_color">#d50000</color>
+    <color name="default_high_light_color">#ff5252</color>
+</resources>

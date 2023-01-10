@@ -1,0 +1,93 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'maven-publish'
+    id 'kotlin-parcelize'
+}
+
+android {
+    defaultConfig {
+        minSdk rootProject.ext.minimumSdkVersion
+        targetSdk rootProject.ext.targetSdkVersion
+        compileSdk rootProject.ext.compileSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            buildConfigField "String", "BASE_URL", "\"https://mintapi.app.thesilverlabs.com\""
+            consumerProguardFiles 'consumer-rules.pro'
+        }
+        debug {
+            buildConfigField "String", "BASE_URL", "\"https://mintapi.beta.thesilverlabs.com\""
+            consumerProguardFiles 'consumer-rules.pro'
+        }
+        qa {
+            buildConfigField "String", "BASE_URL", "\"https://mintapi.beta.thesilverlabs.com\""
+            consumerProguardFiles 'consumer-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = kotlinJvmTargetVersion
+    }
+}
+
+dependencies {
+    implementation 'androidx.annotation:annotation:1.5.0'
+    testImplementation 'junit:junit:4.13.2'
+
+    // okhttp library
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.11'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.11'
+
+    //rx java library
+    implementation "io.reactivex.rxjava3:rxandroid:${rxAndroidVersion}"
+    implementation "io.reactivex.rxjava3:rxjava:${rxJavaVersion}"
+
+    //timber
+    implementation "com.jakewharton.timber:timber:${timberVersion}"
+
+    //moshi (converting json to kotlin pojo in fast and efficient way)
+    implementation "com.squareup.moshi:moshi-kotlin:1.14.0"
+
+    //Chuck Interceptor
+    qaImplementation "com.github.chuckerteam.chucker:library:3.5.2"
+}
+
+// Making POM by using already generated .arr
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId 'com.rizzle.faas'
+            artifactId 'network-apis'
+            version '0.0.1-SNAPSHOT'
+            artifact "$buildDir/outputs/aar/network-layer-release.aar" //aar artifact you want to publish
+
+            //generate pom nodes for dependencies
+            pom.withXml {
+                def dependenciesNode = asNode().appendNode('dependencies')
+                configurations.implementation.allDependencies.each { dependency ->
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', dependency.group)
+                    dependencyNode.appendNode('artifactId', dependency.name)
+                    dependencyNode.appendNode('version', dependency.version)
+                }
+            }
+        }
+    }
+
+    //publish to filesystem repo
+    repositories {
+        maven {
+            url "$buildDir/repo"
+        }
+    }
+}

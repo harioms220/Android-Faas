@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_16"
+    android:background="@drawable/rounded_dialog_gray_900"
+    >
+
+    <View
+        android:id="@+id/action_text_divider"
+        android:layout_width="30dp"
+        android:layout_height="6dp"
+        android:background="@drawable/round_corners"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.rizzle.sdk.faas.customviews.StyledTextView
+        android:id="@+id/tv_share_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/action_text_divider"
+        tools:text="Share hashtag"
+        android:textColor="@color/white"
+        app:colorType="SHADE_1"
+        style="@style/TITLE_1"
+        app:styleType="TITLE_1"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/share_sheet_social_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:clipToPadding="false"
+        android:layout_marginTop="@dimen/padding_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_share_title"
+        tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_share_sheet" />
+
+    <com.rizzle.sdk.faas.customviews.StyledImageView
+        android:id="@+id/iv_copy_link"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/padding_16"
+        android:src="@drawable/ic_copy_link"
+        app:iconType="IC_COPY_LINK"
+        app:layout_constraintEnd_toEndOf="@+id/tv_copy_link"
+        app:layout_constraintStart_toStartOf="@+id/tv_copy_link"
+        app:layout_constraintTop_toBottomOf="@+id/share_sheet_social_rv" />
+
+    <com.rizzle.sdk.faas.customviews.StyledTextView
+        android:id="@+id/tv_copy_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/copy_link"
+        android:textColor="@color/white"
+        app:colorType="SHADE_1"
+        style="@style/BODY_2_REGULAR"
+        app:styleType="BODY_2_REGULAR"
+        app:layout_constraintTop_toBottomOf="@+id/iv_copy_link"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SmallSp" />
+
+    <com.rizzle.sdk.faas.customviews.StyledImageView
+        android:id="@+id/iv_share_link"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_share_link"
+        app:iconType="IC_SHARE_LINK"
+        app:layout_constraintEnd_toEndOf="@+id/tv_share_link"
+        app:layout_constraintStart_toStartOf="@+id/tv_share_link"
+        app:layout_constraintTop_toTopOf="@+id/iv_copy_link" />
+
+    <com.rizzle.sdk.faas.customviews.StyledTextView
+        android:id="@+id/tv_share_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/padding_16"
+        android:text="@string/share_link"
+        android:textColor="@color/white"
+        app:colorType="SHADE_1"
+        style="@style/BODY_2_REGULAR"
+        app:styleType="BODY_2_REGULAR"
+        app:layout_constraintTop_toTopOf="@+id/tv_copy_link"
+        app:layout_constraintStart_toEndOf="@+id/tv_copy_link"
+        tools:ignore="SmallSp"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_report"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_report"
+        app:styleType="BODY_2_REGULAR"
+        app:layout_constraintEnd_toEndOf="@+id/tv_report"
+        app:layout_constraintStart_toStartOf="@+id/tv_report"
+        app:layout_constraintTop_toTopOf="@+id/iv_copy_link" />
+
+    <com.rizzle.sdk.faas.customviews.StyledTextView
+        android:id="@+id/tv_report"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_16"
+        android:text="@string/report"
+        android:textColor="@color/white"
+        app:colorType="SHADE_1"
+        style="@style/BODY_2_REGULAR"
+        app:styleType="BODY_2_REGULAR"
+        app:layout_constraintStart_toEndOf="@+id/tv_share_link"
+        app:layout_constraintTop_toTopOf="@+id/tv_share_link"
+        tools:ignore="SmallSp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

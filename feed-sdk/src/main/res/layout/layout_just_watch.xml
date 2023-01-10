@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/transparent_black_80"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/just_watched_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_just_watch"
+        android:visibility="visible"
+        tools:ignore="ContentDescription" />
+
+    <com.rizzle.sdk.faas.customviews.StyledTextView
+        android:id="@+id/just_watched_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_just_watch"
+        android:layout_gravity="center"
+        android:textColor="@color/gray_100"
+        app:colorType="GRAY_100"
+        android:layout_marginTop="8dp"
+        style="@style/BODY_1_SEMI_BOLD"
+        app:styleType="BODY_1_SEMI_BOLD"
+        />
+
+</LinearLayout>

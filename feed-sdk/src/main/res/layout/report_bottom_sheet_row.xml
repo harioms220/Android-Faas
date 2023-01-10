@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    tools:background="@color/gray_900"
+    tools:ignore="UnusedAttribute,UseCompoundDrawables">
+
+    <com.rizzle.sdk.faas.customviews.StyledTextView
+        android:id="@+id/action_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/padding_16"
+        android:layout_marginBottom="@dimen/padding_8"
+        android:layout_marginTop="@dimen/padding_8"
+        android:textColor="@color/white"
+        app:colorType="SHADE_1"
+        style="@style/TITLE_2_REGULAR"
+        app:styleType="TITLE_2_REGULAR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Report_Text" />
+
+    <View
+        android:id="@+id/action_text_divider"
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:layout_marginEnd="@dimen/padding_16"
+        android:layout_marginStart="@dimen/padding_16"
+        android:background="@color/gray_dark"
+        style="@style/TITLE_2_REGULAR"
+        app:styleType="TITLE_2_REGULAR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/action_text_view"
+        app:layout_constraintStart_toStartOf="@id/action_text_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

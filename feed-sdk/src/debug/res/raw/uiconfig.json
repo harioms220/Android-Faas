@@ -1,0 +1,204 @@
+{
+  "data": {
+    "appConfig": {
+      "config": {
+        "textStyles": [
+          {
+            "name": "HEADING_1",
+            "font": "work-sans-extra-bold",
+            "size": 40
+          },
+          {
+            "name": "HEADING_2_EXTRA_BOLD",
+            "font": "work-sans-extra-bold",
+            "size": 32
+          },
+          {
+            "name": "HEADING_2_SEMI_BOLD",
+            "font": "work-sans-semi-bold",
+            "size": 32
+          },
+          {
+            "name": "TITLE_1",
+            "font": "work-sans-bold",
+            "size": 20
+          },
+          {
+            "name": "TITLE_2_REGULAR",
+            "font": "work-sans-regular",
+            "size": 16
+          },
+          {
+            "name": "TITLE_2_SEMI_BOLD",
+            "font": "work-sans-semi-bold",
+            "size": 16
+          },
+          {
+            "name": "SUBTITLE_REGULAR",
+            "font": "work-sans-regular",
+            "size": 14
+          },
+          {
+            "name": "SUBTITLE_SEMI_BOLD",
+            "font": "work-sans-semi-bold",
+            "size": 14
+          },
+          {
+            "name": "SUBTITLE_BOLD",
+            "font": "work-sans-bold",
+            "size": 14
+          },
+          {
+            "name": "BODY_1_REGULAR",
+            "font": "work-sans-regular",
+            "size": 12
+          },
+          {
+            "name": "BODY_1_SEMI_BOLD",
+            "font": "work-sans-semi-bold",
+            "size": 12
+          },
+          {
+            "name": "BODY_2_SEMI_BOLD",
+            "font": "work-sans-semi-bold",
+            "size": 10
+          },
+          {
+            "name": "BODY_2_REGULAR",
+            "font": "work-sans-regular",
+            "size": 10
+          },
+          {
+            "name": "CAPTION",
+            "font": "work-sans-medium",
+            "size": 10
+          }
+        ],
+        "colors": [
+          {
+            "name": "gray_50",
+            "hexCode": "#F0F0F0"
+          },
+          {
+            "name": "gray_100",
+            "hexCode": "#E9E9ED"
+          },
+          {
+            "name": "gray_200",
+            "hexCode": "#D8D8DD"
+          },
+          {
+            "name": "gray_300",
+            "hexCode": "#A0A0A4"
+          },
+          {
+            "name": "gray_400",
+            "hexCode": "#888889"
+          },
+          {
+            "name": "gray_500",
+            "hexCode": "#575758"
+          },
+          {
+            "name": "gray_600",
+            "hexCode": "#474748"
+          },
+          {
+            "name": "gray_700",
+            "hexCode": "#373738"
+          },
+          {
+            "name": "gray_800",
+            "hexCode": "#272728"
+          },
+          {
+            "name": "gray_900",
+            "hexCode": "#171718"
+          },
+          {
+            "name": "primary",
+            "hexCode": "#BB00ED"
+          },
+          {
+            "name": "secondary_1",
+            "hexCode": "#D7FF00"
+          },
+          {
+            "name": "secondary_2",
+            "hexCode": "#DD2E5A"
+          },
+          {
+            "name": "shade_1",
+            "hexCode": "#FFFFFF"
+          },
+          {
+            "name": "shade_2",
+            "hexCode": "#000000"
+          }
+        ],
+        "icons": [
+          {
+            "name": "ic_back",
+            "iconUrl": "https://drive.google.com/uc?id=1x9hWzJVcw1NdPD7YXpbyC0nCS7thm_07&export=download",
+            "type": "svg"
+          },
+          {
+            "name": "ic_like",
+            "iconUrl": "https://drive.google.com/uc?id=1x9hWzJVcw1NdPD7YXpbyC0nCS7thm_07&export=download",
+            "type": "svg"
+          },
+          {
+            "name": "ic_share",
+            "iconUrl": "https://drive.google.com/uc?id=1x9hWzJVcw1NdPD7YXpbyC0nCS7thm_07&export=download",
+            "type": "svg"
+          },
+          {
+            "name": "ic_share_link",
+            "iconUrl": "https://drive.google.com/uc?id=1x9hWzJVcw1NdPD7YXpbyC0nCS7thm_07&export=download",
+            "type": "svg"
+          },
+          {
+            "name": "ic_more",
+            "iconUrl": "https://drive.google.com/uc?id=1x9hWzJVcw1NdPD7YXpbyC0nCS7thm_07&export=download",
+            "type": "svg"
+          },
+          {
+            "name": "ic_copy_link",
+            "iconUrl": "https://drive.google.com/uc?id=1x9hWzJVcw1NdPD7YXpbyC0nCS7thm_07&export=download",
+            "type": "svg"
+          }
+        ],
+        "fonts": [
+          {
+            "name": "work-sans-extra-bold",
+            "fontUrl": "https://drive.google.com/u/0/uc?id=1whQB5DQHjARnNxWKpLdnK1_KgTQ4GMMU&export=download",
+            "extension": "ttf"
+          },
+          {
+            "name": "work-sans-semi-bold",
+            "fontUrl": "https://drive.google.com/u/0/uc?id=1dFJSpbLduaYj-xo08rY_aesX03N1sRq6&export=download",
+            "extension": "ttf"
+          },
+          {
+            "name": "work-sans-bold",
+            "fontUrl": "https://drive.google.com/u/0/uc?id=1kftEbNpe9bj9ZOP4TjAvbM-OCaulFXLE&export=download",
+            "extension": "ttf"
+          },
+          {
+            "name": "work-sans-regular",
+            "fontUrl": "https://drive.google.com/u/0/uc?id=1CJzeDyxV2PI3aHX35SX6zQBHspS4Ffh7&export=download",
+            "extension": "ttf"
+          },
+          {
+            "name": "work-sans-medium",
+            "fontUrl": "https://drive.google.com/u/0/uc?id=1qIi9YO3gbV3HYy6hHeDNv5xW0owQOcQh&export=download",
+            "extension": "ttf"
+          }
+        ],
+        "cardCornerRadius": 6,
+        "pillCornerRadius": 15,
+        "version": 1
+      }
+    }
+  }
+}

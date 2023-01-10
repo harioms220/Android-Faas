@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_main"
+    android:fitsSystemWindows="true"
+    android:clickable="true"
+    android:focusable="true">
+
+    <include
+        android:id="@+id/header_row"
+        layout="@layout/layout_flair_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/gray_main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_row">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_main"
+            android:orientation="vertical"
+            android:theme="@style/Theme.AppCompat">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/hashtag_name_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/header_row"
+                app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+
+                <com.rizzle.sdk.faas.customviews.StyledTextView
+                    android:id="@+id/hash_tag_name"
+                    style="@style/TITLE_2_SEMI_BOLD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/padding_12"
+                    android:paddingBottom="@dimen/padding_2"
+                    android:textColor="@color/white"
+                    app:colorType="SHADE_1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:styleType="TITLE_2_SEMI_BOLD"
+                    tools:ignore="RtlSymmetry" />
+
+                <com.rizzle.sdk.faas.customviews.StyledTextView
+                    android:id="@+id/hash_tag_views_count"
+                    style="@style/SUBTITLE_REGULAR"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/padding_12"
+                    android:paddingBottom="@dimen/padding_16"
+                    android:textColor="@color/gray_300"
+                    app:colorType="GRAY_300"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/hash_tag_name"
+                    app:styleType="SUBTITLE_REGULAR"
+                    tools:ignore="RtlSymmetry" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/posts_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/padding_16"
+            android:layout_marginStart="@dimen/padding_12"
+            android:layout_marginEnd="@dimen/padding_12"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/padding_36"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:spanCount="3"
+            tools:listitem="@layout/item_vertical_post" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.rizzle.sdk.faas.customviews.StyledTextView
+        android:id="@+id/no_hashtag_available"
+        style="@style/TITLE_2_SEMI_BOLD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="72dp"
+        android:layout_marginEnd="72dp"
+        android:gravity="center"
+        android:text="@string/text_no_tags"
+        android:textColor="@color/gray_100"
+        android:visibility="gone"
+        app:colorType="GRAY_100"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_row"
+        app:styleType="TITLE_2_SEMI_BOLD" />
+
+    <include
+        android:id="@+id/error_layout"
+        layout="@layout/layout_base_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

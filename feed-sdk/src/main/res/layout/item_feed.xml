@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    tools:ignore="ContentDescription">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardElevation="0dp">
+
+        <com.google.android.exoplayer2.ui.StyledPlayerView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:resize_mode="zoom"
+            app:shutter_background_color="@color/gray_main"
+            tools:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            tools:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/play_pause_button"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_play_button" />
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_gravity="top"
+        android:background="@drawable/feed_top_gradient"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/prompt_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/feed_prompt_text_gradient"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <com.rizzle.sdk.faas.customviews.PromptView
+        android:id="@+id/prompt_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_12"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/llLike"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/current_track_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:gravity="center"
+        android:visibility="invisible"
+        app:cardCornerRadius="@dimen/padding_10"
+        app:layout_constraintBottom_toTopOf="@id/llLike"
+        app:layout_constraintEnd_toEndOf="@id/llLike">
+
+        <LinearLayout
+            android:layout_width="68dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/current_track_image"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/dummy_image" />
+
+            <com.rizzle.sdk.faas.customviews.StyledTextView
+                android:id="@+id/tv_watch_now_btn"
+                style="@style/BODY_2_SEMI_BOLD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:paddingHorizontal="3dp"
+                android:paddingVertical="5dp"
+                android:gravity="center"
+                android:text="@string/watch_now"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                app:colorType="SHADE_1"
+                app:styleType="BODY_2_SEMI_BOLD"
+                tools:ignore="SmallSp" />
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@id/cl_share"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieDoubleTapLike"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/llLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        app:layout_constraintBottom_toTopOf="@id/cl_share"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieLike"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivLike"
+            app:layout_constraintEnd_toEndOf="@+id/ivLike"
+            app:layout_constraintStart_toStartOf="@+id/ivLike"
+            app:layout_constraintTop_toTopOf="@+id/ivLike" />
+
+        <com.rizzle.sdk.faas.customviews.LikeUnlikeImageView
+            android:id="@+id/ivLike"
+            android:layout_width="48dp"
+            android:layout_height="42dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/like_count"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:iconSelected="false"
+            app:srcCompat="@drawable/ic_heart_red" />
+
+        <com.rizzle.sdk.faas.customviews.StyledTextView
+            android:id="@+id/like_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="0dp"
+            android:shadowColor="@color/text_shadow_color"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="5"
+            android:translationY="-2dp"
+            android:text="@string/like"
+            android:textColor="@color/white"
+            app:colorType="SHADE_1"
+            style="@style/BODY_2_SEMI_BOLD"
+            app:styleType="BODY_2_SEMI_BOLD"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/ivLike"
+            app:layout_constraintStart_toStartOf="@id/ivLike"
+            tools:ignore="SmallSp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        app:layout_constraintBottom_toBottomOf="@id/prompt_view"
+        app:layout_constraintEnd_toEndOf="@id/llLike"
+        app:layout_constraintStart_toStartOf="@id/llLike">
+
+        <com.rizzle.sdk.faas.customviews.StyledImageView
+            android:id="@+id/post_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            app:iconType="IC_SHARE"
+            app:layout_constraintBottom_toTopOf="@id/post_share_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_feed_share_icon" />
+
+        <com.rizzle.sdk.faas.customviews.StyledTextView
+            android:id="@+id/post_share_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:letterSpacing="-0.01"
+            android:maxLines="1"
+            android:shadowColor="#40000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="5"
+            android:text="@string/text_share"
+            android:textColor="@color/white"
+            app:colorType="SHADE_1"
+            style="@style/BODY_2_SEMI_BOLD"
+            app:styleType="BODY_2_SEMI_BOLD"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="SmallSp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.rizzle.sdk.faas.customviews.EngagementHeatmapView
+        android:id="@+id/engagement_heatmap_view_feed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <include
+        android:id="@+id/error_layout"
+        layout="@layout/layout_base_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/top_pane"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.rizzle.sdk.faas.customviews.StyledImageView
+        android:id="@+id/ic_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:iconType="IC_BACK"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_back_chevron"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

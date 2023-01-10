@@ -1,0 +1,119 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'maven-publish'
+    id 'kotlin-parcelize'
+
+}
+
+android {
+
+    defaultConfig {
+        minSdk rootProject.ext.minimumSdkVersion
+        targetSdk rootProject.ext.targetSdkVersion
+        compileSdk rootProject.ext.compileSdkVersion
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    buildTypes {
+        release {
+            consumerProguardFiles 'consumer-rules.pro'
+        }
+        qa {
+            consumerProguardFiles 'consumer-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = kotlinJvmTargetVersion
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.fragment:fragment-ktx:1.5.5'
+    implementation "androidx.activity:activity-ktx:1.6.1"
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation "androidx.lifecycle:lifecycle-process:2.5.1"
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
+    //rx java library
+    implementation "io.reactivex.rxjava3:rxandroid:${rxAndroidVersion}"
+    implementation "io.reactivex.rxjava3:rxjava:${rxJavaVersion}"
+
+
+    //room
+    kapt "androidx.room:room-compiler:2.4.3"
+
+    // RxJava + RxAndroid support for Room
+    implementation "androidx.room:room-rxjava3:2.4.3"
+
+
+    //timber
+    implementation "com.jakewharton.timber:timber:${timberVersion}"
+
+    //exo video player
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.18.2'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.18.2'
+
+    //glide image caching and display
+    def GLIDE_VERSION = '4.14.2'
+    implementation "com.github.bumptech.glide:glide:${GLIDE_VERSION}"
+    kapt "com.github.bumptech.glide:compiler:${GLIDE_VERSION}"
+
+    // webpDecoder for animated webPs
+    implementation "com.github.zjupure:webpdecoder:2.3.${GLIDE_VERSION}"
+
+
+    implementation 'com.airbnb.android:lottie:5.2.0'
+
+    //Shimmer effect
+    implementation 'com.faltenreich:skeletonlayout:4.0.0'
+
+    //svg loading library
+    implementation 'com.caverock:androidsvg:1.4'
+    implementation project(path: ':network-layer')
+//    implementation 'com.rizzle.faas:network-apis:0.0.1-SNAPSHOT'
+}
+
+// Making POM by using already generated .arr
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId 'com.rizzle.faas'
+            artifactId 'feed'
+            version '0.0.1-SNAPSHOT'
+            artifact "$buildDir/outputs/aar/feed-sdk-release.aar" //aar artifact you want to publish
+
+            //generate pom nodes for dependencies
+            pom.withXml {
+                def dependenciesNode = asNode().appendNode('dependencies')
+                configurations.implementation.allDependencies.each { dependency ->
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', dependency.group)
+                    dependencyNode.appendNode('artifactId', dependency.name)
+                    dependencyNode.appendNode('version', dependency.version)
+                }
+            }
+        }
+    }
+
+    //publish to filesystem repo
+    repositories {
+        maven {
+            url "$buildDir/repo"
+        }
+    }
+}

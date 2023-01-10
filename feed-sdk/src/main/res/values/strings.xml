@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="last_item_loading">Loading</string>
+    <string name="last_item_done">You\'ve reached the end</string>
+    <string name="text_share">Share</string>
+    <string name="HashTagFragment">HashTag Screen</string>
+    <string name="text_no_tags">No posts have been created under this hashtag!</string>
+    <string name="text_no_tracks">No tracks have been created under this hashtag!</string>
+    <string name="text_just_watch">Just watched</string>
+    <string name="network_error_text">Connection error.\n Please try again later.</string>
+    <string name="retry">Retry</string>
+    <string name="share_hashtag">Share hashtag</string>
+    <string name="report">Report</string>
+    <string name="copy_link">Copy Link</string>
+    <string name="share_link">Share Link</string>
+    <string name="watch_now">Watch Now</string>
+    <string name="trending">Trending</string>
+    <string name="thirty_four">34.4k</string>
+    <string name="brahamstra">BRAHMĀSTRA</string>
+    <string name="flair_title_text" formatted="false">%s from %s!</string>
+    <string name="like">Like</string>
+    <string name="track_name">Kesariya (From "Brahmastra")</string>
+    <string name="dummy_data_3">#AmitabhBachchan #RanbirKapoor #AliaBhatt #Brahmāstra #SonyMusicIndia #Bollywood</string>
+    <string name="dummy_data_2">Presenting the official Trailer of Brahmāstra in 4K. Get ready to experience a new world of Ancient Indian Astras and the magic of this extra.</string>
+    <string name="dummy_data">Brahmāstra: Part One – Shiva is a 2022 Indian Hindi-language fantasy action-adventure film written by JD</string>
+    <string name="report_title_dummy">Thank you for reporting!</string>
+    <string name="report_description_dummy">We’ll look into this issue, and if it violates our community guidelines, we’ll take appropriate action.</string>
+    <string name="featured">Featured</string>
+    <string name="text_total_views">%s Views</string>
+    <string name="text_total_videos">%s Videos</string>
+
+    <string name="read_more">show more</string>
+    <string name="read_less">show less</string>
+    <string name="feed">Feed</string>
+    <string name="network_error">Connection error!</string>
+    <string name="network_error_message">We are having trouble connecting right now. Please try again in some time.</string>
+
+    <!--  Share sheet strings   -->
+    <string name="text_share_video">Share Video</string>
+    <string name="text_share_hashtag">Share hashtag</string>
+    <string name="text_share_track">Share track</string>
+    <string name="text_whatsapp_status">Whatsapp Status</string>
+    <string name="text_facebook">Facebook</string>
+    <string name="text_instagram_stories">Stories</string>
+    <string name="text_messenger">Messenger</string>
+    <string name="text_twitter">Twitter</string>
+    <string name="text_message">Messages</string>
+    <string name="text_shorts">Shorts</string>
+    <string name="text_telegram">Telegram</string>
+    <string name="text_copy_link">Copy link</string>
+    <string name="text_instagram">Instagram</string>
+    <string name="text_snapchat">Snapchat</string>
+    <string name="text_whatsapp">Whatsapp</string>
+    <string name="text_youtube">YouTube</string>
+    <string name="text_share_link">Share link</string>
+    <string name="text_more">more</string>
+    <string name="text_link_copied_to_clipboard">Link copied to clipboard</string>
+</resources>
