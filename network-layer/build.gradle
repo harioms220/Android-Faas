@@ -19,7 +19,7 @@ android {
 
     buildTypes {
         release {
-            buildConfigField "String", "BASE_URL", "\"https://mintapi.app.thesilverlabs.com\""
+            buildConfigField "String", "BASE_URL", "\"https://mintapi.beta.thesilverlabs.com\""
             consumerProguardFiles 'consumer-rules.pro'
         }
         debug {
@@ -102,15 +102,15 @@ afterEvaluate {
                 artifactId project.name
                 version project.version
 
-                pom.withXml {
-                    def dependenciesNode = asNode().appendNode('dependencies')
-                    configurations.implementation.allDependencies.each { dependency ->
-                        def dependencyNode = dependenciesNode.appendNode('dependency')
-                        dependencyNode.appendNode('groupId', dependency.group)
-                        dependencyNode.appendNode('artifactId', dependency.name)
-                        dependencyNode.appendNode('version', dependency.version)
-                    }
-                }
+//                pom.withXml {
+//                    def dependenciesNode = asNode().appendNode('dependencies')
+//                    configurations.implementation.allDependencies.each { dependency ->
+//                        def dependencyNode = dependenciesNode.appendNode('dependency')
+//                        dependencyNode.appendNode('groupId', dependency.group)
+//                        dependencyNode.appendNode('artifactId', dependency.name)
+//                        dependencyNode.appendNode('version', dependency.version)
+//                    }
+//                }
             }
         }
     }
