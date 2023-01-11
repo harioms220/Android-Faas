@@ -4,10 +4,7 @@ plugins {
     id 'kotlin-kapt'
     id 'maven-publish'
     id 'kotlin-parcelize'
-
 }
-
-group = 'com.github.harioms220'
 
 android {
 
@@ -120,3 +117,17 @@ publishing {
         }
     }
 }*/
+
+
+afterEvaluate {
+    publishing {
+        publications{
+            release(MavenPublication){
+                from components.release
+                groupId project.group
+                artifactId project.name
+                version project.version
+            }
+        }
+    }
+}
