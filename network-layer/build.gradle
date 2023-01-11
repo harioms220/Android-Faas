@@ -62,37 +62,6 @@ dependencies {
     qaImplementation "com.github.chuckerteam.chucker:library:3.5.2"
 }
 
-/*
-// Making POM by using already generated .arr
-publishing {
-    publications {
-        maven(MavenPublication) {
-            groupId 'com.rizzle.faas'
-            artifactId 'network-apis'
-            version '0.0.1-SNAPSHOT'
-            artifact "$buildDir/outputs/aar/network-layer-release.aar" //aar artifact you want to publish
-
-            //generate pom nodes for dependencies
-            pom.withXml {
-                def dependenciesNode = asNode().appendNode('dependencies')
-                configurations.implementation.allDependencies.each { dependency ->
-                    def dependencyNode = dependenciesNode.appendNode('dependency')
-                    dependencyNode.appendNode('groupId', dependency.group)
-                    dependencyNode.appendNode('artifactId', dependency.name)
-                    dependencyNode.appendNode('version', dependency.version)
-                }
-            }
-        }
-    }
-
-    //publish to filesystem repo
-    repositories {
-        maven {
-            url "$buildDir/repo"
-        }
-    }
-}*/
-
 afterEvaluate {
     publishing {
         publications{
@@ -101,16 +70,6 @@ afterEvaluate {
                 groupId project.group
                 artifactId project.name
                 version project.version
-
-//                pom.withXml {
-//                    def dependenciesNode = asNode().appendNode('dependencies')
-//                    configurations.implementation.allDependencies.each { dependency ->
-//                        def dependencyNode = dependenciesNode.appendNode('dependency')
-//                        dependencyNode.appendNode('groupId', dependency.group)
-//                        dependencyNode.appendNode('artifactId', dependency.name)
-//                        dependencyNode.appendNode('version', dependency.version)
-//                    }
-//                }
             }
         }
     }

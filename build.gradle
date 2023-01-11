@@ -28,5 +28,5 @@ ext{
 
 allprojects {
     version = "1.0"
-    group = 'com.github.harioms220'
+    group = 'com.rizzle.sdk'
 }
