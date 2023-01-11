@@ -83,7 +83,7 @@ dependencies {
 
     //svg loading library
     implementation 'com.caverock:androidsvg:1.4'
-    implementation project(path: ':network-layer')
+    implementation 'com.github.harioms220.Android-Faas-Copy:network-layer:1.0.3'
 //    implementation 'com.rizzle.faas:network-apis:0.0.1-SNAPSHOT'
 }
 
