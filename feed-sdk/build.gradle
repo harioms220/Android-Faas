@@ -7,6 +7,8 @@ plugins {
 
 }
 
+group = 'com.github.harioms220'
+
 android {
 
     defaultConfig {
@@ -88,6 +90,7 @@ dependencies {
 //    implementation 'com.rizzle.faas:network-apis:0.0.1-SNAPSHOT'
 }
 
+/*
 // Making POM by using already generated .arr
 publishing {
     publications {
@@ -116,4 +119,4 @@ publishing {
             url "$buildDir/repo"
         }
     }
-}
+}*/

@@ -25,3 +25,22 @@ ext{
     targetSdkVersion = 33
     compileSdkVersion = 33
 }
+
+allprojects {
+    version = "1.0"
+    group = 'com.github.harioms220'
+}
+
+subprojects {
+    apply plugin: 'maven-publish'
+
+    publishing {
+        publications {
+            maven(MavenPublication) {
+                groupId project.group
+                artifactId project.name
+                version project.version
+            }
+        }
+    }
+}

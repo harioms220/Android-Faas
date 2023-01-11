@@ -62,6 +62,7 @@ dependencies {
     qaImplementation "com.github.chuckerteam.chucker:library:3.5.2"
 }
 
+/*
 // Making POM by using already generated .arr
 publishing {
     publications {
@@ -90,4 +91,4 @@ publishing {
             url "$buildDir/repo"
         }
     }
-}
+}*/
